@@ -10,6 +10,7 @@ function App() {
     <>
       <div>BeautiFull Project</div>
       <div>im danil</div>
+      <h1>hello</h1>
     </>
   )
 }
