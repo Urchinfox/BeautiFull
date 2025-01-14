@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div>BeautiFull Project</div>
-      <div>im danil</div>
+      <div>im Ruby</div>
       <h1>hello</h1>
     </>
   )
