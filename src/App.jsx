@@ -4,13 +4,12 @@
 // import './App.css'
 // test discord bot
 
+
 function App() {
 
   return (
     <>
-      <div>BeautiFull Project</div>
-      <div>im danil</div>
-      <h1>hello2</h1>
+      <h1>Hello</h1>
     </>
   )
 }
