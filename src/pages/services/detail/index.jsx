@@ -25,7 +25,7 @@ const PageServiceDetail = () => {
         <div className="row">
           <div className="col-12 col-md-7">
             <img src="https://live.staticflickr.com/65535/54301904962_b0a76caef3.jpg" alt="before" className="col-6" />
-            <img src="https://live.staticflickr.com/65535/54301904972_eda8cf4ccd.jpg" alt="after"  className="col-6" />
+            <img src="https://live.staticflickr.com/65535/54301904972_eda8cf4ccd.jpg" alt="after" className="col-6" />
           </div>
         </div>
         <div className="col-12 col-md-5">
