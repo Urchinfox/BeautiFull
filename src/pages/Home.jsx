@@ -2,6 +2,7 @@ import banner1 from '@/assets/images/banner/banner1.png'
 import banner2 from '@/assets/images/banner/banner2.png'
 import banner3 from '@/assets/images/banner/banner3.png'
 import bannerDeco from '@/assets/images/banner/bannerDeco.png'
+import '@/pages/home.scss';
 
 const Home = () => {
   return (
