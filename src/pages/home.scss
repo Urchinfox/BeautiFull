@@ -8,7 +8,8 @@
     height: 360px;
     background-color: #F5DCD7;
     z-index: -1;
-    @include mb{
+
+    @include mb {
         top: 23%;
         width: 285px;
         height: 64px;

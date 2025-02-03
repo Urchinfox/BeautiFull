@@ -17,4 +17,16 @@ export default defineConfig({
     ],
   },
   plugins: [react()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "bootstrap/scss/functions";
+          @import "@/shared/variables.scss";
+          @import "bootstrap/scss/bootstrap"; 
+          @import "@/shared/utilities.scss";
+        `,
+      }
+    }
+  }
 });

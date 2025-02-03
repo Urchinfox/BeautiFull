@@ -1,16 +1,13 @@
 import logo from '@/assets/images/header/logo.png';
-import profile from '@/assets/images/header/profile.png';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import '@/components/header/index.scss';
 import { useState } from 'react';
-
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   
-
-
   return (<>
     <header className='d-lg-block d-none'>
       <div className="container">
@@ -34,8 +31,6 @@ const Header = () => {
           </div>
         </nav>
       </div>
-   
-
     </header>
 
     <header className='d-block d-lg-none'>
@@ -62,8 +57,6 @@ const Header = () => {
         </div>
       </div>
     </header>
-
-
   </>)
 };
 export default Header;
