@@ -1,22 +1,17 @@
 .banner-deco::after {
-    content: '';
-    position:absolute;
-    border-radius: 240px 0 0 240px;
-    top: 45%;
-    right: 0;
-    width: 1350px;
-    height: 360px;
-    background-color: #F5DCD7;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  border-radius: 240px 0 0 240px;
+  top: 45%;
+  right: 0;
+  width: 1350px;
+  height: 360px;
+  background-color: #f5dcd7;
+  z-index: -1;
 
-    @include mb {
-        top: 23%;
-        width: 285px;
-        height: 64px;
-    }
+  @include mb {
+    top: 23%;
+    width: 285px;
+    height: 64px;
+  }
 }
-
-
-
-
-  
