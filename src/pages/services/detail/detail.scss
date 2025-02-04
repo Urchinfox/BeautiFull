@@ -1,0 +1,31 @@
+*, *::before, *::after, body{
+    box-sizing: border-box;
+}
+/*banner*/
+.bannerServicesDetail{
+    height: 640px;
+    width: 100%;
+    background: pink;
+    background-image: url(https://live.staticflickr.com/65535/54303026478_c5287fd1cb_k.jpg);
+    background-size: cover; /* 確保圖片鋪滿 */
+    background-position: center; /* 讓圖片居中 */
+    background-repeat: no-repeat; /* 防止重複 */
+    padding: 160px 0;
+    
+}
+.bannerServicesDetail li{
+    padding: 8px 16px;
+}
+.glassBg{
+    background: rgba(255, 255, 255, 0.5); /* 半透明白色背景 */
+    backdrop-filter: blur(10px); /* 背景模糊效果 */
+    -webkit-backdrop-filter: blur(10px); /* Safari 支援 */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 淡淡的邊框，增加玻璃質感 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 淡淡的陰影 */
+}
+.listDecorate{
+    width: 36px;
+    height: 12px;
+    border-right: 1px #A3A3A3 solid;
+}
+/**/
