@@ -1,0 +1,14 @@
+.footer{
+    background: linear-gradient(to right, #F5DCD7 0%, #F5DCD7 100%);
+
+    &-deco::after{
+        content: '';
+        display: block;
+        max-width: 636px;
+        height: 1px;
+        background-color: black;
+        // @include mb{
+        //     width: 351px;
+        // }
+    }
+}
