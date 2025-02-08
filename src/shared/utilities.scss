@@ -45,4 +45,7 @@ a {
 //footer圓角
 .rounded-footer {
   border-radius: 0 320px 0 0;
+  @include mb{
+    border-radius: 0;
+  }
 }
