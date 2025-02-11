@@ -1,17 +1,17 @@
 import '@/pages/home.scss';
-import banner1 from '@/assets/images/home/banner1.png'
-import banner2 from '@/assets/images/home/banner2.png'
-import banner3 from '@/assets/images/home/banner3.png'
-import bannerDeco from '@/assets/images/home/bannerDeco.png'
-import exceptionalL from '@/assets/images/home/exceptional-L.png'
-import exceptionalM from '@/assets/images/home/exceptional-M.png'
-import exceptionalR from '@/assets/images/home/exceptional-R.png'
-import reservation1 from '@/assets/images/home/reservation-1.png'
-import reservation2 from '@/assets/images/home/reservation-2.png'
-import emma from '@/assets/images/home/emma.png'
-import sophia from '@/assets/images/home/sophia.png'
-import ivy from '@/assets/images/home/ivy.png'
-import cindy from '@/assets/images/home/cindy.png'
+import banner1 from '@/assets/images/home/banner1.png';
+import banner2 from '@/assets/images/home/banner2.png';
+import banner3 from '@/assets/images/home/banner3.png';
+import bannerDeco from '@/assets/images/home/bannerDeco.png';
+import exceptionalL from '@/assets/images/home/exceptional-L.png';
+import exceptionalM from '@/assets/images/home/exceptional-M.png';
+import exceptionalR from '@/assets/images/home/exceptional-R.png';
+import reservation1 from '@/assets/images/home/reservation-1.png';
+import reservation2 from '@/assets/images/home/reservation-2.png';
+import emma from '@/assets/images/home/emma.png';
+import sophia from '@/assets/images/home/sophia.png';
+import ivy from '@/assets/images/home/ivy.png';
+import cindy from '@/assets/images/home/cindy.png';
 
 const Home = () => {
   return (
@@ -84,9 +84,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-
       </section>
-
 
       <section className="discount discount-deco-txt d-flex flex-column align-items-center justify-content-center px-12 position-relative overflow-hidden">
         <h2 className='mb-lg-8 fs-3 mb-40 fw-bold position-relative discount-deco discount-deco-line'>首次體驗，專屬折扣！</h2>
@@ -155,7 +153,6 @@ const Home = () => {
                           <p className='py-12 px-16'>第一次體驗就愛上了！專業的服務和溫暖的態度讓我每次來都充滿期待。</p>
                         </div>
                       </div>
-
 
                       <div className="col">
                         <div className='p-36 bg-white'>
@@ -316,8 +313,7 @@ const Home = () => {
         </div>
       </section>
     </>
-  )
+  );
 };
-
 
 export default Home;

@@ -3,7 +3,7 @@ const PageServicesIndex = () => {
     <>
       <div>this is page services index</div>
     </>
-  )
+  );
 };
 
 export default PageServicesIndex;

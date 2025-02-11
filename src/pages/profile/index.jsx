@@ -3,7 +3,7 @@ const PageProfileIndex = () => {
     <>
       <div>this is page profile index</div>
     </>
-  )
+  );
 };
 
 export default PageProfileIndex;

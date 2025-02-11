@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import '@/components/footer/footer.scss'
+import '@/components/footer/footer.scss';
 import logo from '@/assets/images/footer/logo.png';
-import fb from '@/assets/images/footer/facebook.png'
-import ig from '@/assets/images/footer/instagram.png'
-import line from '@/assets/images/footer/line.png'
+import fb from '@/assets/images/footer/facebook.png';
+import ig from '@/assets/images/footer/instagram.png';
+import line from '@/assets/images/footer/line.png';
 
 const Footer = () => {
   return (
@@ -29,11 +29,9 @@ const Footer = () => {
               <Link to='/'><img width={40} height={40} src={fb} alt="" /></Link>
             </div>
           </div>
-
         </div>
       </div>
-
     </footer>
-  )
+  );
 };
 export default Footer;
