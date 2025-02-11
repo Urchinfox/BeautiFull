@@ -1,34 +1,33 @@
 .banner-deco::after {
-  content: '';
-  position:absolute;
+  content: "";
+  position: absolute;
   border-radius: 240px 0 0 240px;
   top: 45%;
   right: 0;
   width: 1350px;
   height: 360px;
-  background-color: #F5DCD7;
+  background-color: #f5dcd7;
   z-index: -1;
-  @include mb{
-      top: 23%;
-      width: 285px;
-      height: 64px;
+  @include mb {
+    top: 23%;
+    width: 285px;
+    height: 64px;
   }
 }
 
-
-.discount{
-  background-image: url('../assets/images/home/discount.png') ;
+.discount {
+  background-image: url("../assets/images/home/discount.png");
   height: 620px;
   background-repeat: no-repeat;
-  background-size:cover;
-  background-position:0 32%;
-  @include mb{
+  background-size: cover;
+  background-position: 0 32%;
+  @include mb {
     height: 287px;
   }
 
-  &-deco-txt::after{
-    content: '';
-    background-image: url('../assets/images/home/discount-txt.png');
+  &-deco-txt::after {
+    content: "";
+    background-image: url("../assets/images/home/discount-txt.png");
     background-size: contain;
     position: absolute;
     top: 25%;
@@ -36,189 +35,189 @@
     transform: translateX(-50%);
     width: 784px;
     height: 138px;
-    @include mb{
+    @include mb {
       background-image: none;
     }
   }
 
-  &-deco::after{
-      content: 'First-Time';
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%); 
-      right: -100px;
-      font-size: 12px;
-      color: #A17C75;
-      @include mb{
-        right: 69%;
-        top:120%;
-      }
+  &-deco::after {
+    content: "First-Time";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100px;
+    font-size: 12px;
+    color: #a17c75;
+    @include mb {
+      right: 69%;
+      top: 120%;
+    }
   }
-  &-deco-line::before{
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: -30px;
-      width: 24px;
-      height: 1px;
-      transform: translateY(-50%); 
-      background-color: #A17C75;
-      @include mb{
-        right: 90%;
-        top:120%;
-      }
+  &-deco-line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    width: 24px;
+    height: 1px;
+    transform: translateY(-50%);
+    background-color: #a17c75;
+    @include mb {
+      right: 90%;
+      top: 120%;
+    }
   }
 }
 
-.exceptional{
-  background-image: url('../assets/images/home/exceptional-bg.png');
+.exceptional {
+  background-image: url("../assets/images/home/exceptional-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  img{
-    @include mb{
+  img {
+    @include mb {
       border-radius: 8px;
     }
   }
-  @include mb{
-      background-image: none;
+  @include mb {
+    background-image: none;
   }
 
-  &-deco::after{
-      content: 'Experience';
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%); 
-      left: 50%;
-      font-size: 12px;
-      color: #A17C75;
-      @include mb{
-          top: 130%;
-          left: 10%;
-      }
+  &-deco::after {
+    content: "Experience";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    font-size: 12px;
+    color: #a17c75;
+    @include mb {
+      top: 130%;
+      left: 10%;
+    }
   }
-  &-deco-line::before{
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 46%;
-      width: 24px;
-      height: 1px;
-      transform: translateY(-50%); 
-      background-color: #A17C75;
-      @include mb{
-          top: 130%;
-          left: 0;
-      }
-  }
-  &-p{
-      border-radius: 4px 4px 20px 20px;
-      box-shadow: #00000026 0px 4px 23px 0px;
-      position: absolute;
-      bottom:0;
-      width: 336px;
-      left:50%;
-      transform: translate(-50%,50%);
-      background: #fff;
-  }
-  &-txt::after{
-      content: '';
-      background-image: url('../assets/images/home/exceptional-txt.png');
-      position: absolute;
-      background-repeat: no-repeat;
-      
-      top: -25%;
+  &-deco-line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    width: 24px;
+    height: 1px;
+    transform: translateY(-50%);
+    background-color: #a17c75;
+    @include mb {
+      top: 130%;
       left: 0;
-      width: 1020px;
-      height: 208px;
-      @include mb{
-          display: none;
-      }
+    }
   }
-  
+  &-p {
+    border-radius: 4px 4px 20px 20px;
+    box-shadow: #00000026 0px 4px 23px 0px;
+    position: absolute;
+    bottom: 0;
+    width: 336px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background: #fff;
+  }
+  &-txt::after {
+    content: "";
+    background-image: url("../assets/images/home/exceptional-txt.png");
+    position: absolute;
+    background-repeat: no-repeat;
+
+    top: -25%;
+    left: 0;
+    width: 1020px;
+    height: 208px;
+    @include mb {
+      display: none;
+    }
+  }
 }
 
-.reservation{
-  &-bg::after{
-    content: '';
-    background-image: url('../assets/images/home/reservation-bg2.png');
+.reservation {
+  &-bg::after {
+    content: "";
+    background-image: url("../assets/images/home/reservation-bg2.png");
     background-size: contain;
     width: 680px;
     height: 240px;
-    position:absolute;
-    top: 0;right: 0;
-    @include mb{
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include mb {
       background-image: none;
     }
   }
-  &-bg::before{
-    content: '';
-    background-image: url('../assets/images/home/reservation-bg1.png');
+  &-bg::before {
+    content: "";
+    background-image: url("../assets/images/home/reservation-bg1.png");
     background-size: contain;
     width: 400px;
     height: 162px;
-    position:absolute;
-    bottom: 0;left: 0;
-    @include mb{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include mb {
       background-image: none;
     }
   }
-  &-txt{
+  &-txt {
     width: 416px;
-    @include mb{
+    @include mb {
       width: 351px;
     }
   }
 }
 
-.comments{
+.comments {
   padding-top: 200px;
-  @include mb{
+  @include mb {
     padding-top: 80px;
   }
-  &-deco::after{
-    content: 'Customer Reviews';
+  &-deco::after {
+    content: "Customer Reviews";
     position: absolute;
     bottom: -30%;
-    // transform: translateY(-50%); 
+    // transform: translateY(-50%);
     left: 10%;
     font-size: 12px;
-    color: #A17C75;
+    color: #a17c75;
     // @include mb{
     //     top: 130%;
     //     left: 10%;
     // }
   }
-&-deco-line::before{
-    content: '';
+  &-deco-line::before {
+    content: "";
     position: absolute;
     bottom: -22%;
     left: 0;
     width: 24px;
     height: 1px;
-    // transform: translateY(-50%); 
-    background-color: #A17C75;
+    // transform: translateY(-50%);
+    background-color: #a17c75;
     // @include mb{
     //     top: 130%;
     //     left: 0;
     // }
   }
-  &-bg::before{
-    content: '';
-    background-image: url('../assets/images/home/comments-bg.png');
+  &-bg::before {
+    content: "";
+    background-image: url("../assets/images/home/comments-bg.png");
     background-size: contain;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 481px;
     height: 419px;
-    @include mb{
+    @include mb {
       background-image: none;
     }
-    
   }
-  &-bg::after{
-    content: '';
-    background-image: url('../assets/images/home/comments-bg2.png');
+  &-bg::after {
+    content: "";
+    background-image: url("../assets/images/home/comments-bg2.png");
     background-size: contain;
     position: absolute;
     transform: translateY(-50%);
@@ -226,13 +225,13 @@
     left: 30%;
     width: 88px;
     height: 71px;
-    @include mb{
+    @include mb {
       background-image: none;
     }
   }
-  &-txt::before{
-    content: '';
-    background-image: url('../assets/images/home/comments-bg1.png');
+  &-txt::before {
+    content: "";
+    background-image: url("../assets/images/home/comments-bg1.png");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -240,15 +239,14 @@
     left: 0;
     width: 840px;
     height: 316px;
-    @include mb{
+    @include mb {
       background-image: none;
     }
   }
-  .carousel-indicators{
+  .carousel-indicators {
     bottom: -10%;
   }
-  .carousel-indicators .active{
-    background-color: #A17C75;
+  .carousel-indicators .active {
+    background-color: #a17c75;
   }
 }
-
