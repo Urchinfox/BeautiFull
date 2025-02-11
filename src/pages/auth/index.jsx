@@ -3,7 +3,7 @@ const PageAuthIndex = () => {
     <>
       <div>this is page auth index</div>
     </>
-  )
+  );
 };
 
 export default PageAuthIndex;

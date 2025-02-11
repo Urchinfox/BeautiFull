@@ -3,7 +3,7 @@ const PageReserveProcess = () => {
     <>
     <div>this is page proceess</div>
     </>
-  )
+  );
 };
 
 export default PageReserveProcess;

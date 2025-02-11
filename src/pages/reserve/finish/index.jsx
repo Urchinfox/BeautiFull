@@ -28,6 +28,6 @@ const PageReserveFinish = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 export default PageReserveFinish;

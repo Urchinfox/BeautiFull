@@ -9,6 +9,6 @@ const DefaultLayout = () => {
         <Outlet />
       <Footer />
     </>
-  )
+  );
 };
 export default DefaultLayout;
