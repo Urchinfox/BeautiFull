@@ -12,29 +12,13 @@
 .bg-opacity-30{
   background-color: rgba(245,220,215,0.3) ;
 }
-.bg-BBB{
-  background-color: rgb(187, 187, 187, 0.25);
-  border-color: rgb(187, 187, 187, 0.25);
-}
 
 // utilities
 .fs-80{
   font-size: 80px;
 }
-.mb-56{
-  margin-bottom: 56px;
-}
-.me-28{
-  margin-right: 28px;
-}
 .border-neutral400{
   border: 1px solid $neutral-400
-}
-.w-40p{
-  width: 40%;
-}
-.w-30P{
-  width: 30%;
 }
 
 //form
@@ -49,17 +33,46 @@
 .sex-input:checked + .sex-radio{
   background-color: $base-brown200;
 }
+@media (max-width:576px){
+  .sex-radio{
+    padding: 8px 12px;
+  }
+}
 
 //update-btn
-.update-btn{
+.update-user-btn{
   padding: 12px 24px;
+  width: 40%;
+  font-size: 20px;
 }
 .update-arrow::before{
-  padding: 12px;
+  padding: 8px;
   background-color: $neutral-50;
   border-radius: 8px;
   font-size: 24px;
 }
+@media (max-width:768px){
+  .update-user-btn{
+    padding: 4px;
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+//update-booking-btn
+.btn-update-booking{
+  padding: 12px 24px;
+  width: 30%;
+  font-size: 20px;
+}
+@media (max-width:992px){
+  .btn-update-booking{
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
 //reserve-state
 .reserve-state{
   position: absolute;
