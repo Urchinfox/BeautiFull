@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+// font-family : Bona Nova
+.font-bona{
+  font-family: "Bona Nova", serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 96px;
+}
+
+// bg-base-brown200-op30
+.bg-opacity-30{
+  background-color: rgba(245,220,215,0.3) ;
+}
+.bg-BBB{
+  background-color: rgb(187, 187, 187, 0.25);
+  border-color: rgb(187, 187, 187, 0.25);
+}
+
+// utilities
+.fs-80{
+  font-size: 80px;
+}
+.mb-56{
+  margin-bottom: 56px;
+}
+.me-28{
+  margin-right: 28px;
+}
+.border-neutral400{
+  border: 1px solid $neutral-400
+}
+.w-40p{
+  width: 40%;
+}
+.w-30P{
+  width: 30%;
+}
+
+//form
+.sex-radio{
+  padding: 12px;
+  text-align: center;
+  width: 100%;
+}
+.sex-radio:hover{
+  cursor: pointer;
+}
+.sex-input:checked + .sex-radio{
+  background-color: $base-brown200;
+}
+
+//update-btn
+.update-btn{
+  padding: 12px 24px;
+}
+.update-arrow::before{
+  padding: 12px;
+  background-color: $neutral-50;
+  border-radius: 8px;
+  font-size: 24px;
+}
+//reserve-state
+.reserve-state{
+  position: absolute;
+  left: 0;
+  line-height: 57.6px;
+}
