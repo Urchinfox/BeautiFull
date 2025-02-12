@@ -1,0 +1,45 @@
+.bf-section-title {
+  width: 100%;
+  max-width: 100%;
+  padding: 24px 0;
+  background-color: rgba(245, 220, 215, 0.3);
+  border-radius: 80px;
+
+  .content {
+    width: 1076px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    margin: 0 auto;
+  }
+
+  .en {
+    opacity: 0.2;
+    color: $base-brown500;
+    font-weight: 500;
+    font-size: 80px;
+    letter-spacing: 0;
+  }
+
+  .zh {
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    color: $neutral-800;
+  }
+  
+  @media (max-width: 767px) {
+    padding: 16px;
+    border-radius: 16px;
+    .content { gap: 8px; }
+    .en {
+      display: none;
+    }
+    .zh {
+      font-size: 28px;
+    }
+  }
+}
