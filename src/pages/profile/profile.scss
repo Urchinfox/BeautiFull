@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Noto+Sans+TC:wght@100..900&display=swap");
 
-// font-family : Bona Nova
-.font-bona{
+// font-family: Bona Nova
+.font-bona {
   font-family: "Bona Nova", serif;
   font-weight: 700;
   font-style: normal;
@@ -9,72 +9,81 @@
 }
 
 // bg-base-brown200-op30
-.bg-opacity-30{
-  background-color: rgba(245,220,215,0.3) ;
+.bg-opacity-30 {
+  background-color: rgba(245, 220, 215, 0.3);
 }
 
 // utilities
-.fs-80{
+.fs-80 {
   font-size: 80px;
 }
-.border-neutral400{
-  border: 1px solid $neutral-400
+
+.border-neutral400 {
+  border: 1px solid $neutral-400;
 }
 
-//form
-.sex-radio{
+// form
+.sex-radio {
   padding: 12px;
   text-align: center;
   width: 100%;
 }
-.sex-radio:hover{
-  cursor: pointer;
+
+@media (hover: hover) {
+  .sex-radio:hover {
+    cursor: pointer;
+  }
 }
-.sex-input:checked + .sex-radio{
+
+.sex-input:checked + .sex-radio {
   background-color: $base-brown200;
 }
-@media (max-width:576px){
-  .sex-radio{
+
+@media (max-width: 576px) {
+  .sex-radio {
     padding: 8px 12px;
   }
 }
 
-//update-btn
-.update-user-btn{
+// update-btn
+.update-user-btn {
   padding: 12px 24px;
   width: 40%;
   font-size: 20px;
 }
-.update-arrow::before{
+
+.update-arrow::before {
   padding: 8px;
   background-color: $neutral-50;
   border-radius: 8px;
   font-size: 24px;
 }
-@media (max-width:768px){
-  .update-user-btn{
+
+@media (max-width: 768px) {
+  .update-user-btn {
     padding: 4px;
     width: 100%;
     font-size: 16px;
   }
 }
 
-//update-booking-btn
-.btn-update-booking{
+// update-booking-btn
+.btn-update-booking {
   padding: 12px 24px;
   width: 30%;
   font-size: 20px;
 }
-@media (max-width:992px){
-  .btn-update-booking{
+
+@media (max-width: 992px) {
+  .btn-update-booking {
     padding: 12px;
     width: 100%;
     font-size: 16px;
   }
 }
 
-//reserve-state
-.reserve-state{
+// reserve-state
+.reserve-state {
   position: absolute;
   left: 0;
   line-height: 57.6px;
