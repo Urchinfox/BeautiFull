@@ -1,4 +1,4 @@
-import '@/pages/profile/profile.scss'
+import '@/pages/profile/profile.scss';
 
 const PageProfileIndex = () => {
   return (
