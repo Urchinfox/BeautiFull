@@ -32,5 +32,9 @@
     "sass": "^1.83.4",
     "typescript": "^5.7.3",
     "vite": "^6.0.5"
-  }
+  },
+  "description": "- 預約服務網站，使用 **React**、**Bootstrap 5** 和 **Vite** 建立。\r - 僅作為練習用途，不作為商業使用。",
+  "main": "eslint.config.js",
+  "author": "",
+  "license": "ISC"
 }
