@@ -441,6 +441,7 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 //daniel-spacers
 $spacer: 1rem !default;
 $spacers: (
+  0: 0,
   4: $spacer * .25,
   8: $spacer * .5,
   12: $spacer * .75,
