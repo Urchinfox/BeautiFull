@@ -42,6 +42,6 @@ const PageServiceDetail = () => {
         </div>
       </section>
     </>
-  )
+  );
 };
 export default PageServiceDetail;

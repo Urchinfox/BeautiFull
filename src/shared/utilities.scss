@@ -45,4 +45,32 @@ a {
 //footer圓角
 .rounded-footer {
   border-radius: 0 320px 0 0;
+  @include mb{
+    border-radius: 0;
+  }
+}
+
+// btn-reservation
+.btn-custom{
+  width: 320px;
+  background-color: #F5DCD780;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  i{
+    position:absolute;
+    top: 50%;right: 20px;
+    transform: translateY(-50%);
+  }
+  &-dot::before{
+    content: '';
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 10px;
+    background-color: black;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
 }
