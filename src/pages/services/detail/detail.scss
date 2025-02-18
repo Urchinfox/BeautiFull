@@ -4,12 +4,12 @@
 body {
   box-sizing: border-box;
 }
-/*banner*/
+/* banner */
 .bannerServicesDetail {
   height: 640px;
   width: 100%;
   background: pink;
-  background-image: url(https://live.staticflickr.com/65535/54303026478_c5287fd1cb_k.jpg);
+  background-image: url(../../../assets/images/detail/banner-lg.png);
   background-size: cover; /* 確保圖片鋪滿 */
   background-position: center; /* 讓圖片居中 */
   background-repeat: no-repeat; /* 防止重複 */
@@ -30,4 +30,111 @@ body {
   height: 12px;
   border-right: 1px #a3a3a3 solid;
 }
-/**/
+
+/* section 1 */
+.decorateBg {
+  width: 100%;
+  background-image: url(../../../assets/images/detail/decorate-bg.png);
+  background-position: right bottom; /* 讓圖片居中 */
+  background-repeat: no-repeat; /* 防止重複 */
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.imageTitale {
+  padding: 16px 0;
+  text-align: center;
+  border: 2px solid #E5E5E5;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFF;
+  width: 100%;
+}
+/* 妝飾圖設定 */
+img.decoration-overlay {
+  position: absolute;
+  top: -64px; /* 調整位置 */
+  right: -44px;
+  width: 122px;
+  opacity: 1;  /*透明度 */
+  pointer-events: none; /* 確保點擊不影響 */
+}
+
+/* section 2 */
+.buttonGroup button {
+  border: 0px;
+  font-size: 20px;
+  padding: 12px;
+  background-color: #E5E5E5;
+}
+table {
+  width: 100%;
+}
+table th {
+  border: 1px solid #E5E5E5;
+  background-color: #E5E5E5;
+  height: 29px;
+  text-align: center;
+}
+table td {
+  border: 1px solid #E5E5E5;
+  text-align: right;
+  vertical-align: top;
+  padding: 4px 8px;
+  height: 6.3rem;
+}
+.statusBox {
+  width: 64px;
+  height: 48px;
+  border: 1px solid #E5E5E5;
+}
+.businessStatus p {
+  line-height: 48px;
+}
+
+
+/* 元件 */
+.green-bg {
+  background-color: $base-green;
+}
+.red-bg {
+  background-color: $base-red200;
+}
+.lightGray-bg {
+  background-color: $neutral-100;
+}
+.button-bg {
+  background-color: #F5DCD7;
+}
+.radius-sm {
+  border-radius: $border-radius-sm;
+}
+.rounded-end-sm {
+  border-top-right-radius: $border-radius-sm;
+  border-bottom-right-radius: $border-radius-sm;
+}
+.rounded-start-sm {
+  border-top-left-radius: $border-radius-sm;
+  border-bottom-left-radius: $border-radius-sm;
+}
+.buttonElement {
+  padding: 12px 24px;
+}
+.buttonElement p {
+  width: 216px;
+  line-height: 40px;
+  margin-right: 16px;
+}
+.buttonElement i {
+  line-height: 1rem;
+  padding: 12px;
+}
