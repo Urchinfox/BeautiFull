@@ -1,0 +1,19 @@
+.reserve-bg{
+  z-index: 1;
+}
+.reserve-bg::after{
+  content:"";
+  background-image: url('../../assets/images/reserve/reserve-bg.png');
+  background-size: contain;
+  position: absolute;
+  bottom: -115px;
+  left: 56px;
+  width: 840px;
+  height: 316px;
+  z-index: -1;
+}
+@media (max-width:767px){
+  .reserve-bg::after{
+    display: none;
+  }
+}

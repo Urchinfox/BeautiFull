@@ -29,10 +29,8 @@
   width: 100%;
 }
 
-@media (hover: hover) {
-  .sex-radio:hover {
-    cursor: pointer;
-  }
+.sex-radio:hover {
+  cursor: pointer;
 }
 
 .sex-input:checked + .sex-radio {
