@@ -1,0 +1,165 @@
+.banner1{
+  background-image: url('../../assets/images/home/servicebg1.png');
+}
+.banner2{
+  background-image: url('../../assets/images/home/servicebg2.png');
+}
+
+.banner3{
+  background-image: url('../../assets/images/home/servicebg3.png');
+}
+
+.banner4{
+  background-image: url('../../assets/images/home/servicebg4.png');
+}
+.banner5{
+  background-image: url('../../assets/images/home/servicebg5.png');
+}
+.service-banner{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 657px;
+    max-width: 100%;
+    overflow: hidden;
+    .blur{
+      background-color: rgba(255,255,255,0.5);
+      backdrop-filter:blur(20px);
+      border: 1px solid white;
+      border-radius: 16px;
+   
+    }
+    img{
+      height: 80px;
+      width: 80px;
+      @include mb{
+        height: 40px;
+        width: 40px;
+      }
+    }
+    @include mb{
+      height: 426px;
+      background-position: center center;
+      .blur-remove{
+        background-color:transparent;
+        backdrop-filter:blur(0);
+        border: none;
+        border-radius: 0;
+    }
+    }
+}
+
+
+.contact{
+  .expand{
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position:absolute;
+    top: 5%;right: 3%;
+    border: none;
+  }
+  &.contact-deco::before{
+    content: '';
+    background-image: url('../../assets/images/services/flower.png');
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    background-size: contain;
+    width: 400px;
+    height: 162px;
+    @include mb{
+      display: none;
+    }
+  }
+  &.contact-deco::after{
+    content: '';
+    position:absolute;
+    border-radius: 0 240px 240px 0;
+    bottom: 0%;
+    left: 0;
+    width: 1100px;
+    height: 309px;
+    background-color: #F5DCD7;
+    z-index: -1;
+    @include mb{
+      display: none;
+    }
+}
+  & .expand:hover{
+    background-color: #F5DCD7;
+  }
+  & .picframe{
+    height: 490px;
+    @include mb{
+      height: 379px;
+    }
+  }
+}
+
+
+.faq {
+
+  .accordion-item {
+    background-color: rgba(245, 220, 215, 0.3);
+  }
+
+  .accordion-item,
+  .accordion-button {
+    background-color: rgba(245, 220, 215, 0.3);
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(245, 220, 215, 0.3);
+    box-shadow: none;
+  }
+
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+
+  .accordion-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .accordion-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+//delete pending *repetitive code
+.btn-custom{
+    width: 320px;
+    background-color: #F5DCD780;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    i{
+      position:absolute;
+      top: 50%;right: 20px;
+      transform: translateY(-50%);
+    }
+    &-dot::before{
+      content: '';
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      left: 10px;
+      background-color: black;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+    @include mb{
+      width: 240px;
+    }
+  }
+
+
+
