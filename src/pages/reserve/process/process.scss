@@ -1,0 +1,60 @@
+.reserveTitle {
+    background-color: rgba($base-brown200, 0.3);
+    padding: 24px 110px;
+}
+.reserveTitle h1 {
+    font-size: 80px;
+    color: $base-brown500;
+    opacity: .2;
+}
+.reserveTitle p {
+    line-height: 96px;
+}
+.dropdownService {
+    width: 564px;
+    height: 64px;
+    border: 0px;
+    background-color: #FFF;
+}
+/* 刪除下拉式選單預設箭頭樣式 */
+.dropdown-toggle::after {
+    display: none !important;
+  }
+
+  table {
+    border: 1px solid #E5E5E5;
+  }
+  table td {
+    height: 4.4rem;
+  }
+
+
+  .custom-radio {
+    display: block;
+    text-align: center;
+    font-size: 20px; // ✅ 調整文字大小
+    padding: 12px 0; // ✅ 調整上下內邊距
+    border: 1px solid #A3A3A3 !important; // 確保邊框顯示
+    background-color: #FFF;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      border-color: #7A7A7A; // 滑鼠移上時改變邊框顏色
+    }
+  
+    // 確保按鈕選中時有正確的背景顏色
+    .btn-check:checked + & {
+      background-color: #F5DCD7 !important;
+      border: 1px solid #A3A3A3 !important;
+    }
+  
+    // 不能按的按鈕
+    &.disabled {
+      background-color: #E5E5E5 !important;
+      color: #A3A3A3 !important;
+      border: none !important;
+      pointer-events: none;
+    }
+  }
+  
