@@ -1,18 +1,13 @@
 import '@/pages/profile/profile.scss';
+import SectionTitle from '@/components/shared/SectionTitle';
+import Button from '@/components/shared/Button';
 
 const PageProfileIndex = () => {
   return (
     <>
       <section className="container py-40 py-lg-80">
-        <div className="bg-opacity-30 mb-16 mb-lg-56 rounded-5">
-          <div className="row">
-            <div className="col-lg-10 mx-auto">
-              <div className="d-flex align-items-center p-16 py-lg-24">
-                <p className="d-none d-lg-block font-bona text-base-brown500 fs-80 opacity-25 me-28">Profile</p>
-                <h3 className="fw-bold text-neutral-800">我的帳戶</h3>
-              </div>
-            </div>
-          </div>
+        <div className="mb-16 mb-lg-56">
+          <SectionTitle textEn="Profile" textZh="我的帳戶"/>
         </div>
         <div className="row">
           <div className="col-lg-10 mx-auto">
@@ -52,15 +47,8 @@ const PageProfileIndex = () => {
         </div>
       </section>
       <section className="container py-40 py-lg-80">
-        <div className="bg-opacity-30 mb-16 mb-lg-56 rounded-5">
-          <div className="row">
-            <div className="col-lg-10 mx-auto">
-              <div className="d-flex align-items-center p-16 py-lg-24">
-                <p className="d-none d-lg-block font-bona text-base-brown500 fs-80 opacity-25 me-28">Reservation</p>
-                <h3 className="fw-bold text-neutral-800">我的預約</h3>
-              </div>
-            </div>
-          </div>
+        <div className="mb-16 mb-lg-56">
+          <SectionTitle textEn="Reservation" textZh="我的預約"/>
         </div>
         <div className="row">
           <div className="col-lg-10 mx-auto mb-16 mb-lg-56">
@@ -84,18 +72,16 @@ const PageProfileIndex = () => {
                 </h6>
               </div>
               <div className="d-flex flex-column flex-md-row-reverse justify-content-center gap-12">
-                <button type="button" className="btn btn-base-brown200 btn-update-booking ms-md-24">
-                  <div className="d-flex align-items-center justify-content-between">
-                    <li>更新預約</li>
-                    <i className="bi bi-arrow-right-short update-arrow"></i>
-                  </div>
-                </button>
-                <button type="button" className="btn btn-neutral-200 btn-update-booking">
-                  <div className="d-flex align-items-center justify-content-between">
-                    <li>取消預約</li>
-                    <i className="bi bi-arrow-right-short update-arrow"></i>
-                  </div>
-                </button>
+                <Button
+                  variant="primary btn-width"
+                  icon={<i className="bi bi-arrow-right-short"></i>}
+                >更新預約
+                </Button>
+                <Button
+                  variant="secondary btn-width"
+                  icon={<i className="bi bi-arrow-right-short"></i>}
+                >取消預約
+                </Button>
               </div>
             </div>
           </div>

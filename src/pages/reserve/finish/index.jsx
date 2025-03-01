@@ -1,8 +1,9 @@
+import '@/pages/reserve/reserve.scss';
 
 const PageReserveFinish = () => {
   return (
     <>
-      <div className="bg-neutral-100 my-40">
+      <div className="bg-neutral-100 my-40 position-relative overflow-hidden reserve-bg">
         <div className="container">
           <div className="text-base-brown500 text-center py-80">
             <h1 className="fw-bold mb-48">已為您保留專屬時光</h1>

@@ -1,0 +1,27 @@
+.p-8-12{
+  padding: 8px 12px;
+}
+
+.sex-radio {
+  padding: 8px 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.sex-radio:hover {
+  cursor: pointer;
+}
+
+.sex-input:checked + .sex-radio {
+  background-color: $base-brown200;
+}
+
+.btn-width{
+  width: 33%;
+}
+
+@media (max-width: 767px) {
+  .btn-width{
+    width: 100%;
+  }
+}
