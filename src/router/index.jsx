@@ -30,88 +30,40 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />
-      }
-    ]    
-  },
-  {
-    path: '/auth',
-    element: <DefaultLayout />,
-    children: [
+      },
       {
-        index: true,
+        path: '/auth',
         element: <PageAuthIndex />
-      }
-    ]    
-  },
-  {
-    path: '/profile',
-    element: <DefaultLayout />,
-    children: [
+      },
       {
-        index: true,
+        path: '/profile',
         element: <PageProfileIndex />
-      }
-    ]    
-  },
-  {
-    path: '/manage',
-    element: <DefaultLayout />,
-    children: [
+      },
       {
-        index: true,
+        path: '/manage',
         element: <PageManageIndex />
-      }
-    ]    
-  },
-  {
-    path: '/reserve/process',
-    element: <DefaultLayout />,
-    children: [
+      },
       {
-        index: true,
+        path: '/reserve/process',
         element: <PageReserveProcess />
-      }
-    ]    
-  },
-  {
-    path: '/reserve/confirm',
-    element: <DefaultLayout />,
-    children: [
+      },
       {
-        index: true,
+        path: '/reserve/confirm',
         element: <PageReserveConfirm />
-      }
-    ]    
-  },
-  {
-    path: '/reserve/finish',
-    element: <DefaultLayout />,
-    children: [
+      },
       {
-        index: true,
+        path: '/reserve/finish',
         element: <PageReserveFinish />
-      }
-    ]    
-  },
-  {
-    path: '/services',
-    element: <DefaultLayout />,
-    children: [
+      },
       {
-        index: true,
+        path: '/services',
         element: <PageServicesIndex />
-      }
-    ]    
-  },
-  {
-    path: '/services/detail',
-    element: <DefaultLayout />,
-    children: [
+      },
       {
-        index: true,
+        path: '/services/detail',
         element: <PageServicesDetail />
-      }
-    ]    
+      },
+    ]
   },
 ]);
 export default router;
