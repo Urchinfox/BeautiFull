@@ -1,5 +1,4 @@
 import './detail.scss';
-import feather from "feather-icons";
 
 const PageServiceDetail = () => {
   return (
