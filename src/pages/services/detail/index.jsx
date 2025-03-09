@@ -29,13 +29,13 @@ const PageServiceDetail = () => {
             <div className="col-6">
               <div className="image-container">
                 <h5 className="imageTitale">Before</h5>
-                <img src="https://live.staticflickr.com/65535/54301904962_b0a76caef3.jpg" alt="before" className="img-fluid" />
+                <img src="/src/assets/images/detail/faceCleansing-b.png" alt="before" className="img-fluid" />
               </div>
             </div>
             <div className="col-6">
               <div className="image-container">
                 <h5 className="imageTitale">After</h5>
-                <img src="https://live.staticflickr.com/65535/54301904972_eda8cf4ccd.jpg" alt="after" className="img-fluid" />
+                <img src="/src/assets/images/detail/faceCleansing-a.png" alt="after" className="img-fluid" />
                 <img src="/src/assets/images/home/bannerDeco.png" alt="decoration" className="decoration-overlay" />
               </div>
             </div>
@@ -60,8 +60,8 @@ const PageServiceDetail = () => {
           <div className="buttonGroup d-flex justify-content-between">
             <div className="d-flex">
               <div className='me-24'>
-                <button type='button' className="rounded-start-sm">&lt;</button>
-                <button type='button' className="rounded-end-sm">&gt;</button>
+                <button type='button' className="rounded-start-sm"><i className="bi bi-chevron-left"></i></button>
+                <button type='button' className="rounded-end-sm"><i className="bi bi-chevron-right"></i></button>
               </div>
               <button type='button' className="radius-sm">今天</button>
             </div>
@@ -145,7 +145,7 @@ const PageServiceDetail = () => {
               <div className="statusBox lightGray-bg  me-16"></div>
               <p className='h6 me-36'>公休</p>
             </div>
-            <a href="#" className='buttonElement button-bg radius-sm d-flex justify-content-between'><p className="h6">• 歡迎預約</p><i className="bi bi-arrow-right rounded-1 bg-white"></i></a>
+            <a href="/reserve/process" className='buttonElement button-bg radius-sm d-flex justify-content-between'><div className="h6" style={{lineHeight: "40px"}}>• 歡迎預約</div><i className="bi bi-arrow-right rounded-1 bg-white"></i></a>
           </div>
         </div>
       </section>
