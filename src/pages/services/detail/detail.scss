@@ -9,10 +9,10 @@ body {
   height: 640px;
   width: 100%;
   background: pink;
-  background-image: url(../../../assets/images/detail/banner-lg.png);
-  background-size: cover; /* 確保圖片鋪滿 */
-  background-position: center; /* 讓圖片居中 */
-  background-repeat: no-repeat; /* 防止重複 */
+  background-image: url(@/assets/images/detail/banner-lg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 160px 0;
 
 }
@@ -22,16 +22,11 @@ body {
 }
 
 .glassBg {
-  background: rgba(255, 255, 255, 0.5);
-  /* 半透明白色背景 */
-  backdrop-filter: blur(10px);
-  /* 背景模糊效果 */
-  -webkit-backdrop-filter: blur(10px);
-  /* Safari 支援 */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  /* 淡淡的邊框，增加玻璃質感 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* 淡淡的陰影 */
+  background: rgba(255, 255, 255, 0.5);  /* 半透明白色背景 */
+  backdrop-filter: blur(10px);  /* 背景模糊效果 */
+  -webkit-backdrop-filter: blur(10px);  /* Safari 支援 */
+  border: 1px solid rgba(255, 255, 255, 0.3);  /* 淡淡的邊框，增加玻璃質感 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* 淡淡的陰影 */
 }
 
 .listDecorate {
@@ -43,9 +38,9 @@ body {
 /* section 1 */
 .decorateBg {
   width: 100%;
-  background-image: url(../../../assets/images/detail/decorate-bg.png);
-  background-position: right bottom; /* 讓圖片居中 */
-  background-repeat: no-repeat; /* 防止重複 */
+  background-image: url(@/assets/images/detail/decorate-bg.png);
+  background-position: right bottom; /* 讓裝飾背景靠右下 */
+  background-repeat: no-repeat;
 }
 .image-container {
   position: relative;
@@ -68,13 +63,13 @@ body {
   background: #FFF;
   width: 100%;
 }
-/* 妝飾圖設定 */
+/* 裝飾圖設定 */
 img.decoration-overlay {
   position: absolute;
   top: -64px; /* 調整位置 */
   right: -44px;
   width: 122px;
-  opacity: 1;  /*透明度 */
+  opacity: 1;
   pointer-events: none; /* 確保點擊不影響 */
 }
 
@@ -138,7 +133,7 @@ table td {
 .buttonElement {
   padding: 12px 24px;
 }
-.buttonElement p {
+.buttonElement div {
   width: 216px;
   line-height: 40px;
   margin-right: 16px;

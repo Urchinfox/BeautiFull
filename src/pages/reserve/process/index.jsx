@@ -50,8 +50,8 @@ const PageReserveProcess = () => {
             <div className="table-responsive">
               <div className="buttonGroup d-flex justify-content-between">
                 <div>
-                  <button type='button' className="rounded-start-sm">&lt;</button>
-                  <button type='button' className="rounded-end-sm">&gt;</button>
+                  <button type='button' className="rounded-start-sm"><i className="bi bi-chevron-left"></i></button>
+                  <button type='button' className="rounded-end-sm"><i className="bi bi-chevron-right"></i></button>
                 </div>
                 <div>
                   <button type='button' className="rounded-start-sm">月</button>
@@ -177,7 +177,7 @@ const PageReserveProcess = () => {
             <h6 className="text-base-brown500 mb-16">注意</h6>
             <p className="mb-48">請提前 10 分鐘到場簽到<br />
             超過預定時段 10 分鐘未到場，視為放棄本次預約</p>
-            <a href="#" className='buttonElement button-bg radius-sm d-flex justify-content-between'><p className="h6">• 下一步</p><i className="bi bi-arrow-down rounded-1 bg-white"></i></a>
+            <a href="#finalStep" className='buttonElement button-bg radius-sm d-flex justify-content-between'><div className="h6" style={{lineHeight: "40px"}}>• 下一步</div><i className="bi bi-arrow-down rounded-1 bg-white"></i></a>
           </div>
         </div>
       </section>
@@ -193,7 +193,7 @@ const PageReserveProcess = () => {
       </section>
       <section className="container py-80">
         <div className="reserveTitle rounded-5 mb-56 row justify-content-center">
-          <div className="col-md-10 col-12 d-flex">
+          <div className="col-md-10 col-12 d-flex" id="finalStep">
             <h1 className="fw-bold me-28">Step 3</h1>
             <p className="h3 fw-bold me-60">填寫預約人資料</p>
           </div>
@@ -295,7 +295,7 @@ const PageReserveProcess = () => {
               </div>
             </div>
             <div className="col-md-6 col-12 offset-md-1"></div>
-            <a href="#" className='buttonElement button-bg radius-sm d-flex justify-content-between col-md-4 col-12'><p className="h6">• 確認預訂資料</p><i className="bi bi-arrow-right rounded-1 bg-white"></i></a>
+            <a href="/reserve/confirm" className='buttonElement button-bg radius-sm d-flex justify-content-between col-md-4 col-12'><div className="h6 ms-12" style={{lineHeight: "40px"}}>• 確認預訂資料</div><i className="bi bi-arrow-right rounded-1 bg-white me-12"></i></a>
           </div>
           
         </form>
