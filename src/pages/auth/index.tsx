@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import "../auth/index.scss";
-import SignUpMode from './signupMode';
+import RegisterMode from './registerMode';
 import LoginMode from './loginMode';
 
 const PageAuthIndex = () => {
@@ -23,7 +23,7 @@ const PageAuthIndex = () => {
         }
         {
           mode === "signup" && (
-            <SignUpMode 
+            <RegisterMode 
               onChangeMode={() => setMode("login")}
             />
           )

@@ -54,13 +54,13 @@ interface Errors {
   phone?: string;
 }
 
-interface SignUpModeProps {
+interface RegisterModeProps {
   onChangeMode: () => void;
 }
 
-const SignUpMode = ({
+const RegisterMode = ({
   onChangeMode
-}: SignUpModeProps) => {
+}: RegisterModeProps) => {
   const handleChangeMode = onChangeMode;
   const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState<RegisterForm>({
@@ -346,4 +346,4 @@ const SignUpMode = ({
     </>
   )
 }
-export default SignUpMode;
+export default RegisterMode;
