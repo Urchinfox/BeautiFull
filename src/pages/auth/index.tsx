@@ -16,8 +16,7 @@ const PageAuthIndex = () => {
         {
           mode === "login" && (
             <LoginMode
-              onChangeMode={() => setMode("signup")} 
-              onSubmit={() => console.log('submit data') } 
+              onChangeMode={() => setMode("signup")}
             />
           )
         }

@@ -4,9 +4,21 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@/components/header/index.scss';
 import { useState } from 'react';
+import { useAuth } from '@/context/auth';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
+    const [toggle, setToggle] = useState(false);
+    const { user, logout } = useAuth();
+    const navigate = useNavigate();
+    
+    const handleClickLogout = () => {
+      logout();
+    };
+
+    const handleClickLogin = () => {
+      navigate('/auth');
+    };
 
   return (
     <>
@@ -31,7 +43,28 @@ const Header = () => {
                 </div> 
                 */
               }
-              <button className='btn' style={{ backgroundColor: '#F5DCD780' }}>登入</button>
+              {
+                user ?
+                (
+                  <button 
+                    className='btn' 
+                    style={{ backgroundColor: 'F5DCD780' }}
+                    onClick={handleClickLogout}
+                  >
+                    登出
+                  </button>
+                )
+                :
+                (
+                  <button 
+                    className='btn' 
+                    style={{ backgroundColor: '#F5DCD780' }}
+                    onClick={handleClickLogin}
+                  >
+                    登入
+                  </button>
+                )
+              }
             </div>
           </nav>
         </div>
