@@ -4,15 +4,15 @@ import InputField from "@/components/shared/InputField";
 import Button from "@/components/shared/Button";
 
 interface LoginModeProps {
-  onSubmit: () => void;
   onChangeMode: () => void;
 }
 const LoginMode = ({ 
-  onSubmit,
   onChangeMode
 }: LoginModeProps) => {
   const handleOnClick = onChangeMode;
-  const handleOnSubmit = onSubmit;
+  const handleOnSubmit = () => {
+    
+  };
   
   return (
     <>

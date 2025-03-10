@@ -6,6 +6,7 @@ import Button from "@/components/shared/Button";
 import supabase from "@/lib/supabaseClient";
 import { Session } from "@supabase/supabase-js";
 import { toast } from "react-hot-toast";
+import { useAuth } from "@/context/auth";
 
 type RegisterForm = {
   email: string;
@@ -61,6 +62,7 @@ interface RegisterModeProps {
 const RegisterMode = ({
   onChangeMode
 }: RegisterModeProps) => {
+  const { user: userContext } = useAuth();
   const handleChangeMode = onChangeMode;
   const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState<RegisterForm>({
@@ -151,9 +153,6 @@ const RegisterMode = ({
       if (!sessionData?.session?.user) {
         throw new Error('找不到註冊資料');
       }
-
-      const isNewUser = await checkIsNewUser(sessionData.session);
-      if (!isNewUser) return;
       
       createUserProfile(sessionData.session);
       toast.success('註冊成功');
@@ -166,36 +165,6 @@ const RegisterMode = ({
       }
     } finally {
       setIsLoading(false);
-    }
-  };
-
-  const checkIsNewUser = async (session: Session) => {
-    const { user: sessionUser } = session;
-    if (sessionUser) {
-      const { id } = sessionUser;
-
-      try {
-        const { data: existingUser, error: checkError } = await supabase
-          .from('users')
-          .select('id')
-          .eq('id', id)
-          .maybeSingle();
-          
-        if (checkError) {
-          throw new Error(`檢查使用者是否存在時發生錯誤：${checkError.message}`);
-        }
-
-        return !existingUser;
-
-      } catch (error) {
-        if (error instanceof Error) {
-          toast.error(error.message);
-          console.error(error.message);
-        } else {
-          toast.error('系統錯誤，請稍後再試');
-        }
-        return false;
-      }
     }
   };
 
