@@ -1,11 +1,8 @@
 import { z } from "zod";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import SectionTitle from "@/components/shared/SectionTitle";
 import InputField from "@/components/shared/InputField";
 import Button from "@/components/shared/Button";
-import supabase from "@/lib/supabaseClient";
-import { Session } from "@supabase/supabase-js";
-import { toast } from "react-hot-toast";
 import { useAuth } from "@/context/auth";
 
 type RegisterForm = {
@@ -16,11 +13,12 @@ type RegisterForm = {
   phone: string;
 }
 
-type UserProfile = {
-  id: string;        // sync with AuthUser.id
-  name: string;
-  email: string;
-  phone: string;
+interface Errors {
+  email?: string;
+  password?: string;
+  confirm_password?: string;
+  name?: string;
+  phone?: string;
 }
 
 // for onChanage validate (validate single field)
@@ -47,14 +45,6 @@ const registerProfileSchema = registerSchema.refine((data) =>
   message: "密碼與確認密碼不ㄧ致，請重新輸入", path: ["confirm_password"]
 });
 
-interface Errors {
-  email?: string;
-  password?: string;
-  confirm_password?: string;
-  name?: string;
-  phone?: string;
-}
-
 interface RegisterModeProps {
   onChangeMode: () => void;
 }
@@ -62,9 +52,11 @@ interface RegisterModeProps {
 const RegisterMode = ({
   onChangeMode
 }: RegisterModeProps) => {
-  const { user: userContext } = useAuth();
+  const { 
+    register,
+    isLoading,
+  } = useAuth();
   const handleChangeMode = onChangeMode;
-  const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState<RegisterForm>({
     email: "",
     password: "",
@@ -72,8 +64,26 @@ const RegisterMode = ({
     name: "",
     phone: "",
   });
-
   const [errors, setErrors] = useState<Errors>({});
+
+  const validate = (userData: typeof user) => {
+    const result = registerProfileSchema
+      .refine((data) =>
+        data.password === data.confirm_password, {
+          message: "密碼與確認密碼不ㄧ致，請重新輸入", path: ["confirm_password"]
+        })
+      .safeParse(userData);
+
+    if (!result.success) {
+      const newErrors: Record<string, string> = {};
+      result.error.issues.forEach((issue) => {
+        newErrors[issue.path[0]] = issue?.message;
+      });
+      setErrors(newErrors);
+      return false;
+    }
+    return true;
+  };
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -95,111 +105,21 @@ const RegisterMode = ({
     }
   };
 
-  const validate = (userData: typeof user) => {
-    const result = registerProfileSchema
-      .refine((data) =>
-        data.password === data.confirm_password, {
-          message: "密碼與確認密碼不ㄧ致，請重新輸入", path: ["confirm_password"]
-        })
-      .safeParse(userData);
-
-    if (!result.success) {
-      const newErrors: Record<string, string> = {};
-      result.error.issues.forEach((issue) => {
-        newErrors[issue.path[0]] = issue?.message;
-      });
-      setErrors(newErrors);
-      return false;
-    }
-    return true;
-  };
 
   const handleOnSubmit = async () => {
-    setIsLoading(true);
-
-    if (!validate(user)) {
-      setIsLoading(false);
-      return;
-
-    } else {
+    
+    if (validate(user)) {
       setErrors({});
+    } else {
+      return;
     }
 
-    const { email, password } = user;
-
-    try {
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: {
-          data: {
-            display_name: user.name,
-            name: user.name,
-            phone: user.phone,
-            email: user.email,
-          },
-        },
-      });
-
-      if (error) {
-        throw new Error(error.message);
-      }
-
-      const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
-      if (sessionError) {
-        throw new Error(sessionError.message);
-      }
-
-      if (!sessionData?.session?.user) {
-        throw new Error('找不到註冊資料');
-      }
-      
-      createUserProfile(sessionData.session);
-      toast.success('註冊成功');
-
-    } catch (error) {
-      if (error instanceof Error) {
-        toast.error(error.message);
-      } else {
-        toast.error('系統錯誤，請稍後再試');
-      }
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const createUserProfile = async (session: Session) => {
-    const { user: sessionUser } = session;
-    if (sessionUser) {
-      try {
-        const newUserProfile: UserProfile = {
-          id:    sessionUser.id,
-          name:  sessionUser.user_metadata.name,
-          email: sessionUser.user_metadata.email,
-          phone: sessionUser.user_metadata.phone,
-        } 
-        const { error: createUserError } = await supabase
-          .from('users')
-          .insert([newUserProfile]);
-
-        if (createUserError) {
-          throw new Error(`創建使用者時發生錯誤：${createUserError.message}`);
-        }
-
-        toast.success('創建使用者成功');
-        return true;
-
-      } catch (error) {
-        if (error instanceof Error) {
-          toast.error(error.message);
-          console.error(error.message);
-        } else {
-          toast.error('系統錯誤，請稍後再試');
-        }
-        return false;
-      }
-    }
-    return false;
+    await register({
+      email: user.email,
+      password: user.password,
+      name: user.name,
+      phone: user.phone,
+    });
   };
 
   return (
